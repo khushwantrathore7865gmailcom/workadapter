@@ -8,5 +8,5 @@ def post_save_create_candidate(sender, instance, created, **kwargs):
     print('instance', instance)
     print('kwargs', kwargs)
     print('created', created)
-    if created:
-        print(Candidate.objects.create(user=User_custom.objects.get(username = instance)))
+    # if created:
+    #     print(Candidate.objects.create(user=User_custom.objects.get(username = instance)))
