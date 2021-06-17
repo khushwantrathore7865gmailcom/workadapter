@@ -1,7 +1,7 @@
 from django.db.models.signals import post_save, pre_delete
 from user_coustom.models import User_custom
 from django.dispatch import receiver
-from .models import Candidate
+from .models import Employer
 @receiver(post_save, sender=User_custom)
 def post_save_create_employer(sender, instance, created, **kwargs):
     print('sender', sender)
@@ -10,6 +10,6 @@ def post_save_create_employer(sender, instance, created, **kwargs):
     print('created', created)
     if created:
         u = sender.objects.get(username=instance)
-        if u.iscandidate==True:
-            e = Candidate(user=u)
+        if u.isemployeer==True:
+            e = Employer(user=u)
             e.save()

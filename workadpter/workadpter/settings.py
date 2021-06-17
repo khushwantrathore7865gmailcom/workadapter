@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'knox',
     'jobseeker',
-    # 'recruiter',
+    'recruiter',
     'user_coustom'
 
 ]

@@ -16,6 +16,8 @@ class User_custom(AbstractUser):
     email = models.EmailField(max_length=254)
     # password = models.CharField(max_length=32,widget=forms.PasswordInput)
     password = models.CharField(max_length=32)
+    last_login = models.DateTimeField(auto_now_add=True,null=True,blank=True)
+    # user_permissions = models.CharField(blank=True,null=True)
     # confirmpass = models.CharField(max_length=32, blank=True)
     iscandidate = models.BooleanField(default=False)
     isemployeer = models.BooleanField(default=False)

@@ -20,7 +20,7 @@ class Candidate(models.Model):
 
 
 class Candidate_profile(models.Model):
-    user_id = models.ForeignKey(Candidate, on_delete=models.CASCADE, related_name='user_id')
+    candidate_id = models.ForeignKey(Candidate, on_delete=models.CASCADE)
     birth_day = models.DateField()
     birth_month = MonthField("Month Value", help_text="some help...")
     birth_year = models.IntegerField()
